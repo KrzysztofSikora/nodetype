@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<style>
+    .container {
+        margin: 0px auto;
+        height: 480px;
+        width: 640px;
+        border: 10px #3333 solid;
+    }
+    .buttons {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+</style>
+<body>
+
+<div class="container">
+<!--    <img src="http://42ebca5dd15d.ngrok.io" title="Camera" />-->
+    <img src="http://192.168.0.38:8081/" title="Camera" />
+
+</div>
+<div>Power
+    <div id="power"></div>
+</div>
+<div class="buttons">
+    <button type="button" id="left">Left</button>
+    <button type="button" id="right">Right</button>
+    <button type="button" id="up">Up</button>
+    <button type="button" id="down">Down</button>
+</div>
+
+<div class="buttons engines">
+    <button type="button" id="turnRight">Left</button>
+    <button type="button" id="turnLeft">Right</button>
+    <button type="button" id="allStop">Stop</button>
+    <button type="button" id="allForward">Forward</button>
+    <button type="button" id="allBackward">Backward</button>
+</div>
+
+<div class="buttons">
+    <button type="button" id="systemOff">Off</button>
+</div>
+</body>
+
+<script>
+    function motorFunction(command) {
+        $.get("/"+ command, function(data, status){
+            console.log("Data: " + data + "\nStatus: " + status);
+            console.log(JSON.stringify(data))
+            $(`#${id}`).html(
+                "<ul style='list-style: none'>" +
+                        "<li>---<span style='color: green'>Bus 1</span>---</li>" +
+                    "<li>BusVoltage: " + data.data[0] + " V</li>" +
+                    "<li>ShuntVoltage: " + data.data[1] + " mV</li>" +
+                    "<li>Current: " + data.data[2] + " mA</li>" +
+                    "<li>Power: " + data.data[3] + " mW</li>" +
+                        "<li>---<span style='color: green;'>Bus 2</span>---</li>" +
+                    "<li>BusVoltage: " + data.data[4] + " V</li>" +
+                    "<li>ShuntVoltage: " + data.data[5] + " mV</li>" +
+                    "<li>Current: " + data.data[6] + " mA</li>" +
+                    "<li>Power: " + data.data[7] + " mW</li>" +
+                "</ul>"
+
+            )
+        });
+    }
+
+    $("#right").click(function() {
+        motorFunction('right');
+    });
+
+    $("#stop").click(function() {
+        motorFunction('stop');
+    });
+
+    $("#left").click(function() {
+        motorFunction('left');
+    });
+
+    $("#up").click(function() {
+        motorFunction('up');
+    });
+    
+    $("#down").click(function() {
+        motorFunction('down');
+    });
+
+    $("#allForward").click(function() {
+        motorFunction('allForward');
+    });
+
+    $("#allStop").click(function() {
+        motorFunction('allStop');
+        console.log("allStop");
+    });
+
+    $("#allBackward").click(function() {
+        motorFunction('allBackward');
+    });
+
+    $("#turnRight").click(function() {
+        motorFunction('turnRight');
+    });
+
+    $("#turnLeft").click(function() {
+        motorFunction('turnLeft');
+    });
+
+    $("#systemOff").click(function() {
+        motorFunction('systemOff');
+    });
+    
+    $("#power").click(function() {
+        motorFunction('power', 'power');
+    });
+    
+</script>
+
+</html>

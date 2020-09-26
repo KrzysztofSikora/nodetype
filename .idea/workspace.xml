@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="174ff3a3-18e7-4e82-b1f3-f7123a22a4fc" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1fMQdO7hes8VJzqABooh0sQc4yK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/public" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="174ff3a3-18e7-4e82-b1f3-f7123a22a4fc" name="Default Changelist" comment="" />
+      <created>1596025567154</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1596025567154</updated>
+      <workItem from="1596025568296" duration="8279000" />
+      <workItem from="1596100700151" duration="640000" />
+      <workItem from="1596106243045" duration="2995000" />
+      <workItem from="1596117219468" duration="689000" />
+      <workItem from="1596118212338" duration="6795000" />
+      <workItem from="1596125593807" duration="1096000" />
+      <workItem from="1596127476189" duration="3033000" />
+      <workItem from="1596183519250" duration="4120000" />
+      <workItem from="1596527645579" duration="668000" />
+      <workItem from="1596528647123" duration="4426000" />
+      <workItem from="1596605275079" duration="920000" />
+      <workItem from="1596608284100" duration="2321000" />
+      <workItem from="1596618602947" duration="23000" />
+      <workItem from="1597141768237" duration="2700000" />
+      <workItem from="1597231024365" duration="14000" />
+      <workItem from="1597844812373" duration="746000" />
+      <workItem from="1598358745700" duration="1248000" />
+      <workItem from="1598382222375" duration="730000" />
+      <workItem from="1598427241702" duration="204000" />
+      <workItem from="1598431041498" duration="7000" />
+      <workItem from="1598511329147" duration="645000" />
+      <workItem from="1598522226547" duration="2952000" />
+      <workItem from="1598613365458" duration="610000" />
+      <workItem from="1599142668304" duration="3289000" />
+      <workItem from="1599160239950" duration="616000" />
+      <workItem from="1599202441854" duration="31000" />
+      <workItem from="1599318827754" duration="612000" />
+      <workItem from="1599383190495" duration="853000" />
+      <workItem from="1599468888158" duration="15000" />
+      <workItem from="1600158033751" duration="108000" />
+      <workItem from="1600681663049" duration="17000" />
+      <workItem from="1600842438406" duration="1379000" />
+      <workItem from="1601109998063" duration="9541000" />
+      <workItem from="1601123962421" duration="133000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1600" y="157" width="1270" height="723" key="DiffContextDialog" timestamp="1596191735613">
+      <screen x="1600" y="12" width="1280" height="1024" />
+    </state>
+    <state x="1600" y="157" width="1270" height="723" key="DiffContextDialog/0.0.1600.873/1600.12.1280.1024@1600.12.1280.1024" timestamp="1596191735613" />
+    <state x="2023" y="281" width="424" height="479" key="FileChooserDialogImpl" timestamp="1596125598884">
+      <screen x="1600" y="12" width="1280" height="1024" />
+    </state>
+    <state x="2023" y="281" width="424" height="479" key="FileChooserDialogImpl/0.0.1600.873/1600.12.1280.1024@1600.12.1280.1024" timestamp="1596125598884" />
+    <state x="672" y="335" key="Github.ShareDialog" timestamp="1596033591128">
+      <screen x="0" y="0" width="1600" height="873" />
+    </state>
+    <state x="672" y="335" key="Github.ShareDialog/0.0.1600.873/1600.12.1280.1024@0.0.1600.873" timestamp="1596033591128" />
+    <state x="615" y="137" width="360" height="592" key="Github.UntrackedFilesDialog" timestamp="1596033604709">
+      <screen x="0" y="0" width="1600" height="873" />
+    </state>
+    <state x="615" y="137" width="360" height="592" key="Github.UntrackedFilesDialog/0.0.1600.873/1600.12.1280.1024@0.0.1600.873" timestamp="1596033604709" />
+    <state width="1238" height="271" key="GridCell.Tab.0.bottom" timestamp="1596125012262">
+      <screen x="1600" y="12" width="1280" height="1024" />
+    </state>
+    <state width="1238" height="271" key="GridCell.Tab.0.bottom/0.0.1600.873/1600.12.1280.1024@1600.12.1280.1024" timestamp="1596125012262" />
+    <state width="1238" height="271" key="GridCell.Tab.0.center" timestamp="1596125012262">
+      <screen x="1600" y="12" width="1280" height="1024" />
+    </state>
+    <state width="1238" height="271" key="GridCell.Tab.0.center/0.0.1600.873/1600.12.1280.1024@1600.12.1280.1024" timestamp="1596125012262" />
+    <state width="1238" height="271" key="GridCell.Tab.0.left" timestamp="1596125012262">
+      <screen x="1600" y="12" width="1280" height="1024" />
+    </state>
+    <state width="1238" height="271" key="GridCell.Tab.0.left/0.0.1600.873/1600.12.1280.1024@1600.12.1280.1024" timestamp="1596125012262" />
+    <state width="1238" height="271" key="GridCell.Tab.0.right" timestamp="1596125012262">
+      <screen x="1600" y="12" width="1280" height="1024" />
+    </state>
+    <state width="1238" height="271" key="GridCell.Tab.0.right/0.0.1600.873/1600.12.1280.1024@1600.12.1280.1024" timestamp="1596125012262" />
+    <state x="2048" y="229" width="373" height="583" key="RollbackChangesDialog" timestamp="1596191736904">
+      <screen x="1600" y="12" width="1280" height="1024" />
+    </state>
+    <state x="2048" y="229" width="373" height="583" key="RollbackChangesDialog/0.0.1600.873/1600.12.1280.1024@1600.12.1280.1024" timestamp="1596191736904" />
+    <state x="304" y="70" key="SettingsEditor" timestamp="1596032439759">
+      <screen x="0" y="0" width="1600" height="873" />
+    </state>
+    <state x="304" y="70" key="SettingsEditor/0.0.1600.873/1600.12.1280.1024@0.0.1600.873" timestamp="1596032439759" />
+    <state x="1835" y="259" width="800" height="523" key="Vcs.Push.Dialog.v2" timestamp="1596108190973">
+      <screen x="1600" y="12" width="1280" height="1024" />
+    </state>
+    <state x="1835" y="259" width="800" height="523" key="Vcs.Push.Dialog.v2/0.0.1600.873/1600.12.1280.1024@1600.12.1280.1024" timestamp="1596108190973" />
+    <state x="1946" y="149" width="587" height="747" key="find.popup" timestamp="1596106500792">
+      <screen x="1600" y="12" width="1280" height="1024" />
+    </state>
+    <state x="1946" y="149" width="587" height="747" key="find.popup/0.0.1600.873/1600.12.1280.1024@1600.12.1280.1024" timestamp="1596106500792" />
+    <state x="1904" y="240" key="run.anything.popup" timestamp="1596183527707">
+      <screen x="1600" y="12" width="1280" height="1024" />
+    </state>
+    <state x="1904" y="240" key="run.anything.popup/0.0.1600.873/1600.12.1280.1024@1600.12.1280.1024" timestamp="1596183527707" />
+    <state x="1903" y="236" width="672" height="678" key="search.everywhere.popup" timestamp="1596118619314">
+      <screen x="1600" y="12" width="1280" height="1024" />
+    </state>
+    <state x="1903" y="236" width="672" height="678" key="search.everywhere.popup/0.0.1600.873/1600.12.1280.1024@1600.12.1280.1024" timestamp="1596118619314" />
+  </component>
+</project>
