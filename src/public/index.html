@@ -50,7 +50,7 @@
 </body>
 
 <script>
-    function motorFunction(command) {
+    function motorFunction(command, id) {
         $.get("/"+ command, function(data, status){
             console.log("Data: " + data + "\nStatus: " + status);
             console.log(JSON.stringify(data))

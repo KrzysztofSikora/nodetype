@@ -139,12 +139,35 @@ class IndexController {
 
     public power = (req: Request, res: Response, next: NextFunction) => {
         try {
-            const parser = arduinoSerialPort.pipe(new readLine({ delimiter: '\r\n' }));
+                arduinoSerialPort.write('l');
+                const readable = new readLine({ delimiter: '\r\n' })
+            const parser = arduinoSerialPort
+                .pipe(readable);
+            let dataToSend: any = [];
             parser.on('data', (data: any) => {
                 console.log('read');
                 console.log(data.split(','));
-                res.status(200).json({ data: data.split(','), message: 'power' });
-                parser.destroy();
+                dataToSend = data.split(',');
+                
+                setTimeout(() => { 
+                                    console.log('Stop reading serial')
+                                        
+                            // Calling unpipe method 
+                    
+                    console.log('close the file stream.'); 
+                //arduinoSerialPort.unpipe(readable)
+                readable.destroy();
+                
+                }, 0); 
+                
+                
+               
+            });
+            parser.on('close', () => {
+            console.log('close');
+                res.status(200).json({ data: dataToSend, message: 'power'
+            });
+                
             });
         } catch (error) {
             next(error);
