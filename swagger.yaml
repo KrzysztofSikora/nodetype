@@ -1,6 +1,8 @@
 tags:
 - name: users
   description: users API
+- name: auth
+  description: auth API
 
 paths:
 # [GET] users
@@ -102,7 +104,47 @@ paths:
           description: 'Conflict'
         500:
           description: 'Server Error'
-
+# [POST] auth
+  /signin:
+    post:
+      tags: 
+      - auth
+      summary: Sing in to application
+      parameters:
+      - name: body
+        in: body
+        description: user Data
+        required: true
+        schema:
+          $ref: '#/definitions/signin'
+      responses:
+        200:
+          description: 'OK'
+        400:
+          description: 'OK'
+        500:
+          description: 'Server Error'
+# [POST] auth
+  /signup:
+    post:
+      tags: 
+      - auth
+      summary: Sing up to application
+      parameters:
+      - name: body
+        in: body
+        description: user Data
+        required: true
+        schema:
+          $ref: '#/definitions/signup'
+      responses:
+        200:
+          description: 'OK'
+        400:
+          description: 'OK'
+        500:
+          description: 'Server Error'
+          
 # definitions
 definitions:
   users:
@@ -111,15 +153,47 @@ definitions:
         - email
         - password
     properties:
-      id:
-        type: integer
-        description: user Id
       email:
         type: string
         description: user Email
       password:
         type: string
         description: user Password
+
+
+  signup:
+    type: object
+    required:
+        - name
+        - username
+        - email
+        - password
+    properties:
+      name:
+        type: string
+        description: user Name
+      username:
+        type: string
+        description: user Username
+      email:
+        type: string
+        description: user Email
+      password:
+        type: string
+        description: user Password  
+
+  signin:
+    type: object
+    required:
+        - email
+        - password
+    properties:
+      email:
+        type: string
+        description: user Email
+      password:
+        type: string
+        description: user Password  
 
 schemes:
  - https
