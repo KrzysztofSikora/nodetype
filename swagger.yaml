@@ -1,34 +1,25 @@
 tags:
-- name: users
-  description: users API
-- name: auth
-  description: auth API
+- name: zombie
+  description: zombie API
+- name: item
+  description: item API
+- name: rates
+  description: rates api
 
 paths:
-# [GET] users
-  /users:
-    get:
-      tags: 
-      - users
-      summary: Find All Users
-      responses:
-        200:
-          description: 'OK'
-        500:
-          description: 'Server Error'
-
-# [POST] users
+# [POST] zombie
+  /zombie:
     post:
       tags:
-      - users
-      summary: Add User
+      - zombie
+      summary: Add zombie
       parameters:
       - name: body
         in: body
-        description: user Data
+        description: zombie Data
         required: true
         schema:
-          $ref: '#/definitions/users'
+          $ref: '#/definitions/zombie'
       responses:
         201:
           description: 'Created'
@@ -39,16 +30,82 @@ paths:
         500:
           description: 'Server Error'
 
-# [GET] users/id
-  /users/{id}:
+# [GET] zombie
+  /zombie/list:
     get:
-      tags:
-      - users
-      summary: Find User By Id
+      tags: 
+      - zombie
+      summary: Get all zombies
+      responses:
+        200:
+          description: 'OK'
+        500:
+          description: 'Server Error'
+
+# [GET] zombie/total/id
+  /zombie/total/{id}:
+    get:
+      tags: 
+      - zombie
+      summary: Get total value of all zombie items.
       parameters:
       - name: id
         in: path
-        description: User Id
+        description: zombie Id
+        required: true
+        type: integer
+      responses:
+        200:
+          description: 'OK'
+        500:
+          description: 'Server Error'
+  
+# [GET] zombie/items/id
+  /zombie/items/{id}:
+    get:
+      tags: 
+      - zombie
+      summary: Get zombie items by id
+      parameters:
+      - name: id
+        in: path
+        description: zombie Id
+        required: true
+        type: integer
+      responses:
+        200:
+          description: 'OK'
+        500:
+          description: 'Server Error'
+
+# [GET] zombie/id
+  /zombie/{id}:
+    get:
+      tags: 
+      - zombie
+      summary: Get zombie by id
+      parameters:
+      - name: id
+        in: path
+        description: zombie Id
+        required: true
+        type: integer
+      responses:
+        200:
+          description: 'OK'
+        500:
+          description: 'Server Error'
+
+
+# [DELETE] zombie/id
+    delete:
+      tags:
+      - zombie
+      summary: Delete zombie by Id
+      parameters:
+      - name: id
+        in: path
+        description: zombie Id
         required: true
         type: integer
       responses:
@@ -58,24 +115,23 @@ paths:
           description: 'Conflict'
         500:
           description: 'Server Error'
-
-# [PUT] users/id
+# [PUT] zombie/id
     put:
       tags:
-      - users
-      summary: Update User By Id
+      - zombie
+      summary: Update zombie by Id
       parameters:
       - name: id
         in: path
-        description: user Id
+        description: zombie Id
         required: true
         type: integer
       - name: body
         in: body
-        description: user Data
+        description: zombie Data
         required: true
         schema:
-          $ref: '#/definitions/users'
+          $ref: '#/definitions/zombies'
       responses:
         200:
           description: 'OK'
@@ -86,115 +142,124 @@ paths:
         500:
           description: 'Server Error'
 
-# [DELETE] users/id
-    delete:
-      tags:
-      - users
-      summary: Delete User By Id
-      parameters:
-      - name: id
-        in: path
-        description: user Id
-        required: true
-        type: integer
+# [GET] item
+  /item/update:
+    get:
+      tags: 
+      - item
+      summary: Update all item prices from external api.
       responses:
         200:
           description: 'OK'
+        500:
+          description: 'Server Error'
+
+# [GET] item
+  /item/list:
+    get:
+      tags: 
+      - item
+      summary: Get all items
+      responses:
+        200:
+          description: 'OK'
+        500:
+          description: 'Server Error'
+
+# [POST] item
+  /item:
+    post:
+      tags:
+      - item
+      summary: Add item
+      parameters:
+      - name: body
+        in: body
+        description: item Data
+        required: true
+        schema:
+          $ref: '#/definitions/item'
+      responses:
+        201:
+          description: 'Created'
+        400:
+          description: 'Bad Request'
         409:
           description: 'Conflict'
         500:
           description: 'Server Error'
-# [POST] auth
-  /signin:
-    post:
-      tags: 
-      - auth
-      summary: Sing in to application
+
+  # [DELETE] item
+    delete:
+      tags:
+      - item
+      summary: Add item
       parameters:
       - name: body
         in: body
-        description: user Data
+        description: delete item
         required: true
         schema:
-          $ref: '#/definitions/signin'
+          $ref: '#/definitions/item'
       responses:
-        200:
-          description: 'OK'
+        201:
+          description: 'Created'
         400:
-          description: 'OK'
+          description: 'Bad Request'
+        409:
+          description: 'Conflict'
         500:
           description: 'Server Error'
-# [POST] auth
-  /signup:
-    post:
+
+# [GET] rates
+  /rates/update:
+    get:
       tags: 
-      - auth
-      summary: Sing up to application
-      parameters:
-      - name: body
-        in: body
-        description: user Data
-        required: true
-        schema:
-          $ref: '#/definitions/signup'
+      - rates
+      summary: Update all rates from external api
       responses:
         200:
-          description: 'OK'
-        400:
           description: 'OK'
         500:
           description: 'Server Error'
           
+# [GET] rates
+  /rates:
+    get:
+      tags: 
+      - rates
+      summary: Get all saved rates.
+      responses:
+        200:
+          description: 'OK'
+        500:
+          description: 'Server Error'
+###################################################################
+
+
+
+
 # definitions
 definitions:
-  users:
-    type: object
-    required:
-        - email
-        - password
-    properties:
-      email:
-        type: string
-        description: user Email
-      password:
-        type: string
-        description: user Password
-
-
-  signup:
+  zombie:
     type: object
     required:
         - name
-        - username
-        - email
-        - password
     properties:
       name:
         type: string
-        description: user Name
-      username:
-        type: string
-        description: user Username
-      email:
-        type: string
-        description: user Email
-      password:
-        type: string
-        description: user Password  
-
-  signin:
+        description: zombie name
+  item:
     type: object
     required:
-        - email
-        - password
+        - name
     properties:
-      email:
-        type: string
-        description: user Email
-      password:
-        type: string
-        description: user Password  
-
+      zombieId:
+        type: number
+        description: zombieId
+      itemId:
+        type: number
+        description: itemId
 schemes:
  - https
  - http

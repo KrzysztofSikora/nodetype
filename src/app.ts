@@ -4,32 +4,43 @@ import * as express from "express";
 import * as helmet from "helmet";
 import * as hpp from "hpp";
 import * as logger from "morgan";
+import * as cron from 'node-cron';
 import Routes from "./interfaces/routes.interface";
 import errorMiddleware from "./middlewares/error.middleware";
-
+import ItemService from "./services/items.service";
 import { sequelize } from "./database/db";
-import userModel from "./models/user.model";
 
 class App {
   public app: express.Application;
   public port: string | number;
   public env: boolean;
+  private itemService;
 
   constructor(routes: Routes[]) {
     this.app = express();
     this.port = process.env.PORT || 3000;
     this.env = process.env.NODE_ENV === "production" ? true : false;
-
+    this.itemService = new ItemService();
     this.initializeMiddlewares();
     this.initializeRoutes(routes);
     this.initializeSwagger();
     this.initializeErrorHandling();
     this.initializePublicStatic();
     this.initializeSequelize();
+    // this.initializeCron();
+  }
+
+
+  // cron job to set
+  private initializeCron() { 
+    cron.schedule('* * * * * *', () => {
+      //  this.itemService.itemListCurrenyUpdate();
+      console.log('cron task run') 
+  });
   }
 
   public async initializeSequelize() {
-    await sequelize.sync({force: false})
+    await sequelize.sync({force: false});  
   }
 
   public listen() {

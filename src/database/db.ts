@@ -8,5 +8,3 @@ export const sequelize = new Sequelize({
   storage: ':memory:',
   models: [__dirname + '/models'] // or [Player, Team],
 })
-
-console.log("tstststst",__dirname + '/models')
